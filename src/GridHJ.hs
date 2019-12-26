@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE OverloadedLists #-}
 {-# LANGUAGE TypeFamilies #-}
-module HJ where
+module VectorThing where
 
 import Prelude as P hiding
     ((==), (+), (-), (/), (>), (<), (>=), (<=)
@@ -227,7 +227,13 @@ boolNum = bool 0 1
 
 -- increment
 >>> m|>: [-2, 3, 5, 6.3]
-[-1,4,6,7.3]
+[-1.0,4.0,6.0,7.3]
+
+-- larger or equal
+>>>  3 >: [1, 3, 5]
+[1,1,0]
+
+
 -}
 
 
